@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="Stylesheet/custom.css">
+    <script src="angular.min.js"></script>
+
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <script src="https://use.fontawesome.com/becd647f77.js"></script>
+
+
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+</head>
+
+<script>
+
+const app = angular.module("myapp",[]);
+app.controller("ctrl",($scope,$interval)=>{
+
+$scope.changeView=()=>{
+    $scope.first=!$scope.first;
+};
+
+$scope.moveItRight=()=>{
+angular.element(right).addClass('animright');
+angular.element(divleft).css('left','0%');
+$scope.hide=true;
+};
+
+$scope.moveItLeft=()=>{
+angular.element(left).addClass('animleft');
+angular.element(divright).css('right','0%');
+$scope.hide=true;
+};
+
+$scope.backLeft=()=>{
+    angular.element(right).removeClass('animright');
+    angular.element(divleft).css('left','-100%');
+    
+};
+
+$scope.backRight=()=>{
+    angular.element(left).removeClass('animleft');
+angular.element(divright).css('right','-100%');
+};
+
+});
+
+</script>
+
+
+<body ng-app="myapp" ng-controller="ctrl">
+
+
+        <div ng-show="!first">
+
+            <h1 class="wow bounceInDown">Hey, Wanna get yourself online,</h1>
+            <hr class="wow bounceInDown">
+            <br>
+
+            <h1 class="wow bounceInUp" data-wow-delay="1.2s">Or want your business to be online?</h1>
+            <hr class="wow bounceInDown">
+            <br>
+
+            <h1 class="wow bounceInRight" data-wow-delay="2.4s">Well, you are at the right place</h1>
+            <hr class="wow bounceInDown">
+            <br>
+            
+            
+            <h1 class="wow bounceInLeft" data-wow-delay="3.6s">Get yourself the perfect product</h1>
+            <hr class="wow bounceInDown">
+            <br>
+
+            <h1 class="wow zoomInRight" data-wow-delay="4.8s">We've got the skill you need. Contact us for more.</h1>
+            <hr class="wow bounceInDown">
+<br><br>    
+            
+<button class="wow jackInTheBox" data-wow-delay="5.7s" ng-click="changeView()">Check us Out</button>
+
+
+
+        </div>
+
+
+
+<div class="bg" ng-show="first">
+    <a href=""><i class="fa fa-arrow-right" ng-click="moveItRight()" id="right" aria-hidden="true"></i></a>
+    <a href=""><i class="fa fa-arrow-left"ng-click="moveItLeft()" id="left" aria-hidden="true"></i></a>
+    <h1 ng-show="!hide">For links, go on the left side</h1>
+    <h1 ng-show="!hide">For respective pages, go on the right side</h1>
+
+
+<div class="left" id="divleft">
+<div class="leftparent">
+           <i class="fa fa-times" aria-hidden="true" id="crossl" ng-click="backLeft()"></i>
+    </div>
+</div>
+
+
+
+<div class="right" id="divright">
+    <div class="rightparent">
+
+        <i class="fa fa-times" aria-hidden="true" id="crossr" ng-click="backRight()"></i>
+    </div>
+</div>
+
+</div>
+
+    
+</body>
+</html>
