@@ -69,7 +69,7 @@ $scope.backLeft=()=>{
 <body ng-app="myapp" ng-controller="ctrl">
 
 
-        <div ng-show="first">
+        <div ng-show="!first">
 
             <h1 class="wow bounceInDown">Hey, Wanna get yourself online,</h1>
             <hr class="wow bounceInDown">
@@ -100,7 +100,7 @@ $scope.backLeft=()=>{
 
 
 
-<div class="bg" ng-show="!first">
+<div class="bg" ng-show="first">
     <a href=""><i class="fa fa-arrow-right" ng-click="moveItRight()" id="right" aria-hidden="true"></i></a>
     <!-- <a href=""><i class="fa fa-arrow-left"ng-click="moveItLeft()" id="left" aria-hidden="true"></i></a> -->
     <h1 ng-show="!hide">For links, go on the left side</h1>
