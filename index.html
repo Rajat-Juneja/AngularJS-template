@@ -32,7 +32,7 @@
 <script>
 
 const app = angular.module("myapp",[]);
-app.controller("ctrl",($scope,$interval)=>{
+app.controller("ctrl",($scope,$interval,$timeout)=>{
 
 $scope.changeView=()=>{
     $scope.first=!$scope.first;
@@ -44,22 +44,22 @@ angular.element(divleft).css('left','0%');
 $scope.hide=true;
 };
 
-$scope.moveItLeft=()=>{
-angular.element(left).addClass('animleft');
-angular.element(divright).css('right','0%');
-$scope.hide=true;
-};
+// $scope.moveItLeft=()=>{
+// angular.element(left).addClass('animleft');
+// angular.element(divright).css('right','0%');
+// $scope.hide=true;
+// };
 
 $scope.backLeft=()=>{
-    angular.element(right).removeClass('animright');
+    
     angular.element(divleft).css('left','-100%');
+    $timeout(()=>{$scope.hide=false;
+        angular.element(right).removeClass('animright');
+    },1000);
     
 };
 
-$scope.backRight=()=>{
-    angular.element(left).removeClass('animleft');
-angular.element(divright).css('right','-100%');
-};
+
 
 });
 
@@ -69,7 +69,7 @@ angular.element(divright).css('right','-100%');
 <body ng-app="myapp" ng-controller="ctrl">
 
 
-        <div ng-show="!first">
+        <div ng-show="first">
 
             <h1 class="wow bounceInDown">Hey, Wanna get yourself online,</h1>
             <hr class="wow bounceInDown">
@@ -100,11 +100,11 @@ angular.element(divright).css('right','-100%');
 
 
 
-<div class="bg" ng-show="first">
+<div class="bg" ng-show="!first">
     <a href=""><i class="fa fa-arrow-right" ng-click="moveItRight()" id="right" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-arrow-left"ng-click="moveItLeft()" id="left" aria-hidden="true"></i></a>
+    <!-- <a href=""><i class="fa fa-arrow-left"ng-click="moveItLeft()" id="left" aria-hidden="true"></i></a> -->
     <h1 ng-show="!hide">For links, go on the left side</h1>
-    <h1 ng-show="!hide">For respective pages, go on the right side</h1>
+    <h1 ng-show="!hide">For respective pages, go downwards</h1>
 
 
 <div class="left" id="divleft">
@@ -115,12 +115,19 @@ angular.element(divright).css('right','-100%');
 
 
 
-<div class="right" id="divright">
+<!-- <div class="right" id="divright">
     <div class="rightparent">
 
         <i class="fa fa-times" aria-hidden="true" id="crossr" ng-click="backRight()"></i>
     </div>
+</div> -->
+
 </div>
+
+
+
+<div class="main">
+<ng-view></ng-view>
 
 </div>
 
