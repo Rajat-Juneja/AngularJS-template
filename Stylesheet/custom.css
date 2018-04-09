@@ -7,7 +7,6 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    /* overflow: hidden; */
 }
 
 div h1{
@@ -16,17 +15,13 @@ div h1{
     color: black;
     word-spacing: 10px;
     letter-spacing: 2.5px;
-    /* font-size: 40px !important; */
 }
 
 div button{
-    /* transform: translate(-50%); */
     cursor: pointer;
     border:none;
     width: 100%;
-    /* margin: 5% 50%; */
     padding: 1% 0;
-    /* transition: 0.5s ease; */
     font-size: 20px;
     font-weight: 900;
 }
@@ -43,9 +38,6 @@ i.fa{
 left: 5%;
 }
 
-/* .fa-arrow-left{
-right: 5%;
-} */
 
 
 
@@ -67,24 +59,6 @@ right: 5%;
 }
 
 
-/* 
-.animleft{
-    animation: anim1 1s ease-in-out forwards;
-}
-
-@keyframes anim1{
-    from{
-        right: 5%;
-        visibility: visible;
-        transform: translate(0%,-50%);
-    }
-    to{
-        right: 120%;
-        transform: translate(-100%,-50%);
-        visibility: hidden;
-    }   
-} */
-
 
 div.left
 {
@@ -95,18 +69,8 @@ div.left
     background: linear-gradient(to right, rgb(122, 161, 210), rgb(219, 212, 180), rgb(204, 149, 192));
     border-radius: 2px; 
     height: 662px;
-    /* border-right: 0.5px solid rgba(0,0,0,0.5); */
 }
 
-/* div.right{
-    transition: 0.8s all ease-in-out;
-    width: 50%;
-    position: absolute;
-    right: -100%;
-    background: linear-gradient(to right, rgb(217, 167, 199), rgb(255, 252, 220));
-    border-radius: 2px; 
-    height: 662px;
-} */
 
 div.leftparent{
     position: relative;
@@ -170,7 +134,6 @@ div.bg{
 }
 
 .left .leftparent ul li a:hover{
-    /* font-size: 34px; */
     font-weight: 600;
 
 }
@@ -197,8 +160,6 @@ div.bg{
 }
 
 .left .leftparent ul li a:hover::after {
-    /* width: 100%; */
-    /* animation-delay: 0.1s; */
     animation: anim2 0.5s forwards ease-in-out; 
 }
 
@@ -245,7 +206,7 @@ div.bg{
     background-image: url("../bghome.jpg");
     height: 662px;
     background-size: 100% 100%;
-    /* opacity: 0.6;  */
+
     
 }
 
@@ -257,8 +218,6 @@ div.bg{
 }
 .homemain h1{
     color: rgba(0,0,0,1);
-    /* font-weight: 900; */
-    /* opacity: 1 !important; */
     position: absolute;
     text-align: center;
     width: 100%;

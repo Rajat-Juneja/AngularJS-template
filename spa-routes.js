@@ -1,9 +1,3 @@
-// app.constant("HOME","/home");
-// app.constant("IMPORTANCE","/importance");
-// app.constant("PRODUCTS","/products");
-// app.constant("CONTACT","/contact");
-
-
 
 app.config(function($routeProvider,$locationProvider){
     $locationProvider.hashPrefix('');

@@ -15,10 +15,8 @@
 
     <link rel="stylesheet" href="Stylesheet/custom.css">
     <script src="angular.min.js"></script>
-    <!-- <script src="angular-route.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
     
-    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script> -->
 
     <link rel="stylesheet" href="font-awesome.min.css">
     <script src="https://use.fontawesome.com/becd647f77.js"></script>
@@ -38,7 +36,7 @@
 <body ng-app="myapp" ng-controller="ctrl">
 
 
-        <div ng-show="first">
+        <div ng-show="!first">
 
             <h1 class="wow bounceInDown">Hey, Wanna get yourself online,</h1>
             <hr class="wow bounceInDown">
@@ -69,9 +67,8 @@
 
 
 
-<div class="bg" ng-show="!first">
+<div class="bg" ng-show="first">
     <a href=""><i class="fa fa-arrow-right" ng-click="moveItRight()" id="right" title="Open Links" aria-hidden="true"></i></a>
-    <!-- <a href=""><i class="fa fa-arrow-left"ng-click="moveItLeft()" id="left" aria-hidden="true"></i></a> -->
     <h1 ng-show="!hide">For links, go on the left side</h1>
     <h1 ng-show="!hide">For respective pages, go downwards</h1>
 
@@ -91,20 +88,11 @@
     </div>
 </div>
 
-
-
-<!-- <div class="right" id="divright">
-    <div class="rightparent">
-
-        <i class="fa fa-times" aria-hidden="true" id="crossr" ng-click="backRight()"></i>
-    </div>
-</div> -->
-
 </div>
 
 
 
-<div class="main" id="last" ng-show="!first">
+<div class="main" id="last" ng-show="first">
 <ng-view></ng-view>
 
 </div>
