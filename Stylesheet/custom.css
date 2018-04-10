@@ -194,6 +194,16 @@ div.bg{
     }
 }
 
+@media (max-width:568px) {
+    div.bg {
+      background-size: 200% 100%;
+      background-position: 40% center;
+    }
+
+    i.fa {
+      font-size: 35px;
+    }
+}
 
 
 /* HTML PAGES */
