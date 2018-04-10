@@ -15,6 +15,7 @@ app.controller("ctrl",($scope,$interval,$timeout,$location,$anchorScroll)=>{
         angular.element(divleft).css('left','-100%');
         $timeout(()=>{$scope.hide=false;
             angular.element(right).removeClass('animright');
+            angular.element(right).css('display','block');
         },1000);
         
     };

@@ -15,6 +15,7 @@ div h1{
     color: black;
     word-spacing: 10px;
     letter-spacing: 2.5px;
+    font-size: 4.25vw;
 }
 
 div button{
@@ -130,7 +131,7 @@ div.bg{
 
 .left .leftparent ul li{
     margin: 2.5% auto;
-    width: 15%;
+    width: 100%;
 }
 
 .left .leftparent ul li a:hover{
