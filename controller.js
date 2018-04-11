@@ -30,6 +30,7 @@ app.controller("ctrl",($scope,$interval,$timeout,$location,$anchorScroll)=>{
             angular.element(right).removeClass('animright');
             $location.hash(scrollLocation);
             $anchorScroll();
+            angular.element(right).css('display','block');
         },1000);
 
     };
