@@ -388,6 +388,7 @@ div.bg{
 .contactmain .row{
     margin: 0px;
     margin-top: 5% ! important;
+    height: 10%;
 }
 
 .contactmain .row .each{
@@ -487,6 +488,8 @@ div.bg{
     .homemain h2{
         font-size: 18px;
     }
+    .contactmain .row{
+        height: 80%;}
 }
 
 @media(max-width:420px){
