@@ -7,7 +7,10 @@ app.controller("ctrl",($scope,$interval,$timeout,$location,$anchorScroll)=>{
     $scope.moveItRight=()=>{
     angular.element(right).addClass('animright');
     angular.element(divleft).css('left','0%');
-    $scope.hide=true;
+    $scope.hide=true
+         $timeout(()=>{
+        angular.element(right).css('display','none');
+    },1000);
     };
     
     $scope.backLeft=()=>{
